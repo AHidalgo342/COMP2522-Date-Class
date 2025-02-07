@@ -8,6 +8,7 @@
  * @author Carl M
  * @author Jonathan Y
  * @author Alex H
+ * @author Felix N
  * @version 1.3
  */
 public class Date
@@ -52,18 +53,18 @@ public class Date
     private static final int NOVEMBER_NUM = 11;
     private static final int DECEMBER_NUM = 12;
 
-    private static final int JANUARY_MONTH_CODE = 1;
-    private static final int FEBRUARY_MONTH_CODE = 4;
-    private static final int MARCH_MONTH_CODE = 4;
-    private static final int APRIL_MONTH_CODE = 0;
-    private static final int MAY_MONTH_CODE = 2;
-    private static final int JUNE_MONTH_CODE = 5;
-    private static final int JULY_MONTH_CODE = 0;
-    private static final int AUGUST_MONTH_CODE = 3;
-    private static final int SEPTEMBER_MONTH_CODE = 6;
-    private static final int OCTOBER_MONTH_CODE = 1;
-    private static final int NOVEMBER_MONTH_CODE = 4;
-    private static final int DECEMBER_MONTH_CODE = 6;
+    private static final int JANUARY_CODE = 1;
+    private static final int FEBRUARY_CODE = 4;
+    private static final int MARCH_CODE = 4;
+    private static final int APRIL_CODE = 0;
+    private static final int MAY_CODE = 2;
+    private static final int JUNE_CODE = 5;
+    private static final int JULY_CODE = 0;
+    private static final int AUGUST_CODE = 3;
+    private static final int SEPTEMBER_CODE = 6;
+    private static final int OCTOBER_CODE = 1;
+    private static final int NOVEMBER_CODE = 4;
+    private static final int DECEMBER_CODE = 6;
 
     private static final int SATURDAY_CODE = 0;
     private static final int SUNDAY_CODE = 1;
@@ -346,18 +347,18 @@ public class Date
         int monthCode;
         switch (month)
         {
-            case JANUARY_NUM -> monthCode = JANUARY_MONTH_CODE;
-            case FEBRUARY_NUM -> monthCode = FEBRUARY_MONTH_CODE;
-            case MARCH_NUM -> monthCode = MARCH_MONTH_CODE;
-            case APRIL_NUM -> monthCode = APRIL_MONTH_CODE;
-            case MAY_NUM -> monthCode = MAY_MONTH_CODE;
-            case JUNE_NUM -> monthCode = JUNE_MONTH_CODE;
-            case JULY_NUM -> monthCode = JULY_MONTH_CODE;
-            case AUGUST_NUM -> monthCode = AUGUST_MONTH_CODE;
-            case SEPTEMBER_NUM -> monthCode = SEPTEMBER_MONTH_CODE;
-            case OCTOBER_NUM -> monthCode = OCTOBER_MONTH_CODE;
-            case NOVEMBER_NUM -> monthCode = NOVEMBER_MONTH_CODE;
-            case DECEMBER_NUM -> monthCode = DECEMBER_MONTH_CODE;
+            case JANUARY_NUM -> monthCode = JANUARY_CODE;
+            case FEBRUARY_NUM -> monthCode = FEBRUARY_CODE;
+            case MARCH_NUM -> monthCode = MARCH_CODE;
+            case APRIL_NUM -> monthCode = APRIL_CODE;
+            case MAY_NUM -> monthCode = MAY_CODE;
+            case JUNE_NUM -> monthCode = JUNE_CODE;
+            case JULY_NUM -> monthCode = JULY_CODE;
+            case AUGUST_NUM -> monthCode = AUGUST_CODE;
+            case SEPTEMBER_NUM -> monthCode = SEPTEMBER_CODE;
+            case OCTOBER_NUM -> monthCode = OCTOBER_CODE;
+            case NOVEMBER_NUM -> monthCode = NOVEMBER_CODE;
+            case DECEMBER_NUM -> monthCode = DECEMBER_CODE;
             default -> throw new IllegalArgumentException("month is not a valid month in the year (1-12)");
         }
         return monthCode;
