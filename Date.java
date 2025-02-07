@@ -7,9 +7,10 @@
  * @author Carl M
  * @author Jonathan Y
  * @author Alex H
+ * @author Felix N
  * @author Glenn D
  * @author Szymon Z
- * @version 1.4
+ * @version 1.5
  */
 public class Date implements Printable, Comparable<Date>
 {
@@ -77,6 +78,7 @@ public class Date implements Printable, Comparable<Date>
     private static final int DAY_OF_WEEK_STEP3    = 4;
     private static final int EXTRA_CALC_2000S     = 6;
     private static final int EXTRA_CALC_1800S     = 2;
+
     private static final int EXTRA_CALC_LEAP_YEAR = 6;
 
     private final int year;
@@ -390,6 +392,7 @@ public class Date implements Printable, Comparable<Date>
             case NUM_OCTOBER -> monthCode = MONTH_CODE_OCTOBER;
             case NUM_NOVEMBER -> monthCode = MONTH_CODE_NOVEMBER;
             case NUM_DECEMBER -> monthCode = MONTH_CODE_DECEMBER;
+
             default -> throw new IllegalArgumentException("month is not a valid month in the year (1-12)");
         }
         return monthCode;
