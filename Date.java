@@ -9,7 +9,7 @@
  * @author Jonathan Y
  * @author Alex H
  * @author Felix N
- * @version 1.3
+ * @version 1.4
  */
 public class Date
         implements Printable, Comparable<Date>
