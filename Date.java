@@ -15,11 +15,9 @@
  */
 public class Date implements Printable, Comparable<Date>
 {
-    /** Minimum and maximum year constraints */
     public static final int YEAR_CURRENT = 2025;
     public static final int YEAR_MINIMUM = 1800;
 
-    /** Even/odd check-related constants */
     private static final int EVEN_CHECK = 2;
     private static final int EVEN       = 0;
     private static final int ODD        = 1;
@@ -33,20 +31,17 @@ public class Date implements Printable, Comparable<Date>
     private static final int LEAP_YEAR_CHECK  = 4;
     private static final int LEAP_YEAR        = 0;
 
-    /** Month-related constants */
     private static final int MONTH_MINIMUM        = 1;
     private static final int MONTH_MAXIMUM        = 12;
     private static final int MONTH_PLACEMENT      = 100;
     private static final int MONTH_MIDYEAR_SWITCH = 7;
 
-    /** Minimum and maximum day constraints */
     private static final int DAY_MINIMUM                    = 1;
     private static final int DAY_MAXIMUM_LONG               = 31;
     private static final int DAY_MAXIMUM_SHORT              = 30;
     private static final int DAY_FEBRUARY_MAXIMUM           = 28;
     private static final int DAY_FEBRUARY_MAXIMUM_LEAP_YEAR = 29;
 
-    /** Numeric codes for months */
     private static final int NUM_JANUARY   = 1;
     private static final int NUM_FEBRUARY  = 2;
     private static final int NUM_MARCH     = 3;
@@ -74,7 +69,6 @@ public class Date implements Printable, Comparable<Date>
     private static final int MONTH_CODE_NOVEMBER  = 4;
     private static final int MONTH_CODE_DECEMBER  = 6;
 
-    /** Numeric codes for days */
     private static final int CODE_SATURDAY  = 0;
     private static final int CODE_SUNDAY    = 1;
     private static final int CODE_MONDAY    = 2;
@@ -88,10 +82,8 @@ public class Date implements Printable, Comparable<Date>
     private static final int EXTRA_CALC_1800S     = 2;
     private static final int EXTRA_CALC_LEAP_YEAR = 6;
 
-    /** Number of days in a week */
     private static final int NUM_DAYS_IN_WEEK     = 7;
 
-    /** Number to be multiplied in step 3 of getDayOfWeek() formula */
     private static final int DAY_OF_WEEK_STEP3    = 4;
 
     private final int year;
