@@ -10,7 +10,8 @@
  * @author Felix N
  * @author Glenn D
  * @author Szymon Z
- * @version 1.5
+ * @author Daniel C
+ * @version 1.6
  */
 public class Date implements Printable, Comparable<Date>
 {
@@ -21,6 +22,7 @@ public class Date implements Printable, Comparable<Date>
     private static final int EVEN       = 0;
     private static final int ODD        = 1;
 
+    /** Leap year-related constants */
     private static final int YEAR_PLACEMENT   = 1000;
     private static final int MILLENNIA_CHECK  = 100;
     private static final int REMOVE_MILLENNIA = 1000;
@@ -53,6 +55,7 @@ public class Date implements Printable, Comparable<Date>
     private static final int NUM_NOVEMBER  = 11;
     private static final int NUM_DECEMBER  = 12;
 
+    /** Month codes, used in the getDayOfWeek() formula */
     private static final int MONTH_CODE_JANUARY   = 1;
     private static final int MONTH_CODE_FEBRUARY  = 4;
     private static final int MONTH_CODE_MARCH     = 4;
@@ -74,12 +77,14 @@ public class Date implements Printable, Comparable<Date>
     private static final int CODE_THURSDAY  = 5;
     private static final int CODE_FRIDAY    = 6;
 
-    private static final int NUM_DAYS_IN_WEEK     = 7;
-    private static final int DAY_OF_WEEK_STEP3    = 4;
+    /** getDayOfWeek() extra additions */
     private static final int EXTRA_CALC_2000S     = 6;
     private static final int EXTRA_CALC_1800S     = 2;
-
     private static final int EXTRA_CALC_LEAP_YEAR = 6;
+
+    private static final int NUM_DAYS_IN_WEEK     = 7;
+
+    private static final int DAY_OF_WEEK_STEP3    = 4;
 
     private final int year;
     private final int month;
@@ -170,18 +175,18 @@ public class Date implements Printable, Comparable<Date>
 
         switch(month)
         {
-            case NUM_JANUARY -> sb.append("January");
-            case NUM_FEBRUARY -> sb.append("February");
-            case NUM_MARCH -> sb.append("March");
-            case NUM_APRIL -> sb.append("April");
-            case NUM_MAY -> sb.append("May");
-            case NUM_JUNE -> sb.append("June");
-            case NUM_JULY -> sb.append("July");
-            case NUM_AUGUST -> sb.append("August");
+            case NUM_JANUARY   -> sb.append("January");
+            case NUM_FEBRUARY  -> sb.append("February");
+            case NUM_MARCH     -> sb.append("March");
+            case NUM_APRIL     -> sb.append("April");
+            case NUM_MAY       -> sb.append("May");
+            case NUM_JUNE      -> sb.append("June");
+            case NUM_JULY      -> sb.append("July");
+            case NUM_AUGUST    -> sb.append("August");
             case NUM_SEPTEMBER -> sb.append("September");
-            case NUM_OCTOBER -> sb.append("October");
-            case NUM_NOVEMBER -> sb.append("November");
-            case NUM_DECEMBER -> sb.append("December");
+            case NUM_OCTOBER   -> sb.append("October");
+            case NUM_NOVEMBER  -> sb.append("November");
+            case NUM_DECEMBER  -> sb.append("December");
             default -> throw new IllegalArgumentException("month is not a valid month in the year (1-12)");
         }
 
@@ -287,13 +292,13 @@ public class Date implements Printable, Comparable<Date>
 
         switch(this.getDayOfTheWeek())
         {
-            case CODE_SATURDAY -> dayStr = "Saturday";
-            case CODE_SUNDAY -> dayStr = "Sunday";
-            case CODE_MONDAY -> dayStr = "Monday";
-            case CODE_TUESDAY -> dayStr = "Tuesday";
+            case CODE_SATURDAY ->  dayStr = "Saturday";
+            case CODE_SUNDAY ->    dayStr = "Sunday";
+            case CODE_MONDAY ->    dayStr = "Monday";
+            case CODE_TUESDAY ->   dayStr = "Tuesday";
             case CODE_WEDNESDAY -> dayStr = "Wednesday";
-            case CODE_THURSDAY -> dayStr = "Thursday";
-            case CODE_FRIDAY -> dayStr = "Friday";
+            case CODE_THURSDAY ->  dayStr = "Thursday";
+            case CODE_FRIDAY ->    dayStr = "Friday";
             default -> dayStr = "0";
         }
 
@@ -380,18 +385,18 @@ public class Date implements Printable, Comparable<Date>
 
         switch(month)
         {
-            case NUM_JANUARY -> monthCode = MONTH_CODE_JANUARY;
-            case NUM_FEBRUARY -> monthCode = MONTH_CODE_FEBRUARY;
-            case NUM_MARCH -> monthCode = MONTH_CODE_MARCH;
-            case NUM_APRIL -> monthCode = MONTH_CODE_APRIL;
-            case NUM_MAY -> monthCode = MONTH_CODE_MAY;
-            case NUM_JUNE -> monthCode = MONTH_CODE_JUNE;
-            case NUM_JULY -> monthCode = MONTH_CODE_JULY;
-            case NUM_AUGUST -> monthCode = MONTH_CODE_AUGUST;
+            case NUM_JANUARY   -> monthCode = MONTH_CODE_JANUARY;
+            case NUM_FEBRUARY  -> monthCode = MONTH_CODE_FEBRUARY;
+            case NUM_MARCH     -> monthCode = MONTH_CODE_MARCH;
+            case NUM_APRIL     -> monthCode = MONTH_CODE_APRIL;
+            case NUM_MAY       -> monthCode = MONTH_CODE_MAY;
+            case NUM_JUNE      -> monthCode = MONTH_CODE_JUNE;
+            case NUM_JULY      -> monthCode = MONTH_CODE_JULY;
+            case NUM_AUGUST    -> monthCode = MONTH_CODE_AUGUST;
             case NUM_SEPTEMBER -> monthCode = MONTH_CODE_SEPTEMBER;
-            case NUM_OCTOBER -> monthCode = MONTH_CODE_OCTOBER;
-            case NUM_NOVEMBER -> monthCode = MONTH_CODE_NOVEMBER;
-            case NUM_DECEMBER -> monthCode = MONTH_CODE_DECEMBER;
+            case NUM_OCTOBER   -> monthCode = MONTH_CODE_OCTOBER;
+            case NUM_NOVEMBER  -> monthCode = MONTH_CODE_NOVEMBER;
+            case NUM_DECEMBER  -> monthCode = MONTH_CODE_DECEMBER;
 
             default -> throw new IllegalArgumentException("month is not a valid month in the year (1-12)");
         }
