@@ -11,7 +11,7 @@
  * @author Glenn D
  * @author Szymon Z
  * @author Daniel C
- * @version 1.6
+ * @version 1.7
  */
 public class Date implements Printable, Comparable<Date>
 {
@@ -22,7 +22,7 @@ public class Date implements Printable, Comparable<Date>
     private static final int EVEN       = 0;
     private static final int ODD        = 1;
 
-    /** Leap year-related constants */
+    /* Leap year-related constants */
     private static final int YEAR_PLACEMENT   = 1000;
     private static final int MILLENNIA_CHECK  = 100;
     private static final int REMOVE_MILLENNIA = 1000;
@@ -55,7 +55,7 @@ public class Date implements Printable, Comparable<Date>
     private static final int NUM_NOVEMBER  = 11;
     private static final int NUM_DECEMBER  = 12;
 
-    /** Month codes, used in the getDayOfWeek() formula */
+    /* Month codes, used in the getDayOfWeek() formula */
     private static final int MONTH_CODE_JANUARY   = 1;
     private static final int MONTH_CODE_FEBRUARY  = 4;
     private static final int MONTH_CODE_MARCH     = 4;
@@ -77,7 +77,7 @@ public class Date implements Printable, Comparable<Date>
     private static final int CODE_THURSDAY  = 5;
     private static final int CODE_FRIDAY    = 6;
 
-    /** getDayOfWeek() extra additions */
+    /* getDayOfWeek() extra additions */
     private static final int EXTRA_CALC_2000S     = 6;
     private static final int EXTRA_CALC_1800S     = 2;
     private static final int EXTRA_CALC_LEAP_YEAR = 6;
@@ -446,6 +446,12 @@ public class Date implements Printable, Comparable<Date>
         }
     }
 
+    /*
+     * Helper method used to check if the passed year is a leap year.
+     *
+     * @param year the year to check for leap year status.
+     * @return true if the year is a leap year, false otherwise.
+     */
     private static boolean isLeapYear(int year)
     {
         boolean leapYear;
